@@ -1,0 +1,22 @@
+
+import { useEffect, useState } from "react";
+
+function Carregamento() {
+  const [hora, setHora] = useState("");
+
+  useEffect(() => {
+    console.log("Efeito executado!");
+
+    const horaAtual = new Date().toLocaleTimeString();
+    setHora(horaAtual);
+  }, []);
+
+  return (
+    <div>
+      <h2>Carregamento de dados</h2>
+      <p>Hora do carregamento: {hora}</p>
+    </div>
+  );
+}
+
+export default Carregamento;
